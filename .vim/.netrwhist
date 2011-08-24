@@ -1,0 +1,10 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =8
+let g:netrw_dirhist_1='/home/niko/code/yogurt/.bundler/ruby/1.8/gems/carrierwave-0.5.7/lib/carrierwave'
+let g:netrw_dirhist_2='/home/niko/code/yogurt/.bundler/ruby/1.8/gems/carrierwave-0.5.7/lib/carrierwave/uploader'
+let g:netrw_dirhist_3='/home/niko/code/yogurt/.git'
+let g:netrw_dirhist_4='/home/niko/code/yogurt'
+let g:netrw_dirhist_5='/home/niko/code/yogurt/app/uploaders'
+let g:netrw_dirhist_6='/home/niko/code/yogurt/spec/support'
+let g:netrw_dirhist_7='/home/niko/code/yogurt/spec/support/matchers'
+let g:netrw_dirhist_8='/home/niko/code/yogurt/app/models'

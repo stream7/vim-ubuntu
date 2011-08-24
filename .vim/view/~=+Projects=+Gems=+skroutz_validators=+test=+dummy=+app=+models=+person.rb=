@@ -1,0 +1,127 @@
+let s:so_save = &so | let s:siso_save = &siso | set so=0 siso=0
+argglobal
+let s:cpo_save=&cpo
+set cpo&vim
+nmap <buffer> gf <Plug>RailsTabFind
+nmap <buffer> f <Plug>RailsSplitFind
+nnoremap <buffer> <silent> g} :exe        "ptjump =RubyCursorIdentifier()"
+nnoremap <buffer> <silent> } :exe          "ptag =RubyCursorIdentifier()"
+nnoremap <buffer> <silent> g] :exe      "stselect =RubyCursorIdentifier()"
+nnoremap <buffer> <silent> g :exe        "stjump =RubyCursorIdentifier()"
+nnoremap <buffer> <silent>  :exe v:count1."stag =RubyCursorIdentifier()"
+nnoremap <buffer> <silent> ] :exe v:count1."stag =RubyCursorIdentifier()"
+nnoremap <buffer> <silent>  :exe  v:count1."tag =RubyCursorIdentifier()"
+nmap <buffer> [f <Plug>RailsAlternate
+nmap <buffer> ]f <Plug>RailsRelated
+nmap <buffer> gf <Plug>RailsFind
+nnoremap <buffer> <silent> g] :exe       "tselect =RubyCursorIdentifier()"
+nnoremap <buffer> <silent> g :exe         "tjump =RubyCursorIdentifier()"
+nnoremap <buffer> <silent> <Plug>RailsTabFind :RTfind
+nnoremap <buffer> <silent> <Plug>RailsVSplitFind :RVfind
+nnoremap <buffer> <silent> <Plug>RailsSplitFind :RSfind
+nnoremap <buffer> <silent> <Plug>RailsFind :REfind
+nnoremap <buffer> <silent> <Plug>RailsRelated :R
+nnoremap <buffer> <silent> <Plug>RailsAlternate :A
+let &cpo=s:cpo_save
+unlet s:cpo_save
+setlocal keymap=
+setlocal noarabic
+setlocal autoindent
+setlocal nobinary
+setlocal bufhidden=
+setlocal buflisted
+setlocal buftype=
+setlocal nocindent
+setlocal cinkeys=0{,0},0),:,0#,!^F,o,O,e
+setlocal cinoptions=
+setlocal cinwords=if,else,while,do,for,switch
+setlocal comments=:#
+setlocal commentstring=#\ %s
+setlocal complete=.,w,b,u,t,i
+setlocal completefunc=syntaxcomplete#Complete
+setlocal nocopyindent
+setlocal nocursorcolumn
+setlocal nocursorline
+setlocal define=^\\s*def\\s\\+\\(self\\.\\)\\=
+setlocal dictionary=
+setlocal nodiff
+setlocal equalprg=
+setlocal errorformat=
+setlocal expandtab
+if &filetype != 'ruby'
+setlocal filetype=ruby
+endif
+setlocal foldcolumn=0
+setlocal foldenable
+setlocal foldexpr=0
+setlocal foldignore=#
+setlocal foldlevel=1
+setlocal foldmarker={{{,}}}
+setlocal foldmethod=indent
+setlocal foldminlines=1
+setlocal foldnestmax=20
+setlocal foldtext=foldtext()
+setlocal formatexpr=
+setlocal formatoptions=croql
+setlocal formatlistpat=^\\s*\\d\\+[\\]:.)}\\t\ ]\\s*
+setlocal grepprg=
+setlocal iminsert=0
+setlocal imsearch=0
+setlocal include=^\\s*\\<\\(load\\|w*require\\)\\>
+setlocal includeexpr=RailsIncludeexpr()
+setlocal indentexpr=GetRubyIndent()
+setlocal indentkeys=0{,0},0),0],!^F,o,O,e,=end,=elsif,=when,=ensure,=rescue,==begin,==end
+setlocal noinfercase
+setlocal iskeyword=@,48-57,_,192-255
+setlocal keywordprg=ri
+setlocal nolinebreak
+setlocal nolisp
+setlocal nolist
+setlocal makeprg=
+setlocal matchpairs=(:),{:},[:]
+setlocal modeline
+setlocal modifiable
+setlocal nrformats=octal,hex
+setlocal nonumber
+setlocal numberwidth=4
+setlocal omnifunc=rubycomplete#Complete
+setlocal path=.,~/Projects/Gems/skroutz_validators/test/dummy,~/Projects/Gems/skroutz_validators/test/dummy/app,~/Projects/Gems/skroutz_validators/test/dummy/app/models,~/Projects/Gems/skroutz_validators/test/dummy/app/controllers,~/Projects/Gems/skroutz_validators/test/dummy/app/helpers,~/Projects/Gems/skroutz_validators/test/dummy/config,~/Projects/Gems/skroutz_validators/test/dummy/lib,~/Projects/Gems/skroutz_validators/test/dummy/app/views,~/Projects/Gems/skroutz_validators/test/dummy/app/*,~/Projects/Gems/skroutz_validators/test/dummy/vendor,~/Projects/Gems/skroutz_validators/test/dummy/vendor/plugins/*/lib,~/Projects/Gems/skroutz_validators/test/dummy/vendor/plugins/*/test,~/Projects/Gems/skroutz_validators/test/dummy/vendor/rails/*/lib,~/Projects/Gems/skroutz_validators/test/dummy/vendor/rails/*/test,/usr/local/lib/site_ruby/1.8,/usr/local/lib/site_ruby/1.8/x86_64-linux,/usr/local/lib/site_ruby,/usr/lib/ruby/vendor_ruby/1.8,/usr/lib/ruby/vendor_ruby/1.8/x86_64-linux,/usr/lib/ruby/vendor_ruby,/usr/lib/ruby/1.8,/usr/lib/ruby/1.8/x86_64-linux,,~/.gem/ruby/1.8/gems/zeypay-0.0.6/lib,/usr/lib/ruby/gems/1.8/gems/RedCloth-4.2.2/ext,/usr/lib/ruby/gems/1.8/gems/RedCloth-4.2.2/lib,/usr/lib/ruby/gems/1.8/gems/RedCloth-4.2.2/lib/case_sensitive_require,/usr/lib/ruby/gems/1.8/gems/SystemTimer-1.2.2/lib,/usr/lib/ruby/gems/1.8/gems/SystemTimer-1.2/lib,/usr/lib/ruby/gems/1.8/gems/Text-1.1.2/lib,/usr/lib/ruby/gems/1.8/gems/ZenTest-4.2.1/lib,/usr/lib/ruby/gems/1.8/gems/abstract-1.0.0/lib,/usr/lib/ruby/gems/1.8/gems/action_mailer_tls-1.1.3/lib,/usr/lib/ruby/gems/1.8/gems/actionmailer-2.3.4/lib,/usr/lib/ruby/gems/1.8/gems/actionmailer-2.3.5/lib,/usr/lib/ruby/gems/1.8/gems/actionmailer-2.3.8/lib,/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib,/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib,/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib,/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib,/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib,/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.8/lib,/usr/lib/ruby/gems/1.8/gems/activeresource-2.3.4/lib,/usr/lib/ruby/gems/1.8/gems/activeresource-2.3.5/lib,/usr/lib/ruby/gems/1.8/gems/activeresource-2.3.8/lib,/usr/lib/ruby/gems/1.8/gems/activesupport-2.3.4/lib,/usr/lib/ruby/gems/1.8/gems/activesupport-2.3.5/lib,/usr/lib/ruby/gems/1.8/gems/activesupport-2.3.8/lib,/usr/lib/ruby/gems/1.8/gems/addressable-2.1.2/lib,/usr/lib/ruby/gems/1.8/gems/agile_serializer-0.0.1/lib,/usr/lib/ruby/gems/1.8/gems/agile_serializer-0.0.3/lib,/usr/lib/ruby/gems/1.8/gems/agtm-0.0.6/lib,/usr/lib/ruby/gems/1.8/gems/agtm-0.0.7/lib,/usr/lib/ruby/gems/1.8/gems/agtm-0.0.8/lib,/usr/lib/ruby/gems/1.8/gems/amazon-ecs-0.5.7/lib,/usr/lib/ruby/gems/1.8/gems/apns-0.9.0/lib,/usr/lib/ruby/gems/1.8/gems/arel-0.2.1/lib,/usr/lib/ruby/gems/1.8/gems/arel-0.2.pre/lib,/usr/lib/ruby/gems/1.8/gems/arrayfields-4.7.4/lib,/usr/lib/ruby/gems/1.8/gems/authlogic-2.1.5/lib,/usr/lib/ruby/gems/1.8/gems/autotest-4.2.3/lib,/usr/lib/ruby/gems/1.8/gems/autotest-rails-4.1.0/lib,/usr/lib/ruby/gems/1.8/gems/awesome_print-0.3.1/lib,/usr/lib/ruby/gems/1.8/gems/beanstalk-client-1.1.0/lib,/usr/lib/ruby/gems/1.8/gems/blackhole-store-0.1.0/lib,/usr/lib/ruby/gems/1.8/gems/blackhole-store-0.2.0/lib,/usr/lib/ruby/gems/1.8/gems/blackhole-store-0.3.0/lib,/usr/lib/ruby/gems/1.8/gems/bson-0.20.1/lib,/usr/lib/ruby/gems/1.8/gems/bson-1.0.4/lib,/usr/lib/ruby/gems/1.8/gems/bson-1.1.5/lib,/usr/lib/ruby/gems/1.8/gems/bson_ext-0.20.1/ext,/usr/lib/ruby/gems/1.8/gems/bson_ext-1.0.4/ext,/usr/lib/ruby/gems/1.8/gems/bson_ext-1.1.5/ext,/usr/lib/ruby/gems/1.8/gems/builder-2.1.2/lib,/usr/lib/ruby/gems/1.8/gems/bundler-1.0.0.beta.4/lib,/usr/lib/ruby/gems/1.8/gems/bundler-1.0.0.rc.1/lib,/usr/lib/ruby/gems/1.8/gems/bundler-1.0.0.rc.2/lib,/usr/lib/ruby/gems/1.8/gems/bundler-1.0.0.rc.3/lib,/usr/lib/ruby/gems/1.8/gems/bundler-1.0.0/lib,/usr/lib/ruby/gems/1.8/gems/bundler-1.0.10/lib,/usr/lib/ruby/gems/1.8/gems/bundler-1.0.2/lib,/usr/lib/ruby/gems/1.8/gems/bundler-1.0.7/lib,/usr/lib/ruby/gems/1.8/gems/capistrano-2.5.10/lib,/usr/lib/ruby/gems/1.8/gems/capistrano-ext-1.2.1/lib,/usr/lib/ruby/gems/1.8/gems/capistran
+setlocal nopreserveindent
+setlocal nopreviewwindow
+setlocal quoteescape=\\
+setlocal noreadonly
+setlocal norightleft
+setlocal rightleftcmd=search
+setlocal noscrollbind
+setlocal shiftwidth=2
+setlocal noshortname
+setlocal nosmartindent
+setlocal softtabstop=2
+setlocal nospell
+setlocal spellcapcheck=[.?!]\\_[\\])'\"\	\ ]\\+
+setlocal spellfile=
+setlocal spelllang=en
+setlocal statusline=%<%f\ %h%m%r%{rails#statusline()}%=%-14.(%l,%c%V%)\ %P
+setlocal suffixesadd=.rb,.rhtml,.erb,.rxml,.builder,.rjs,.mab,.liquid,.haml,.dryml,.mn,.yml,.csv,.rake,s.rb
+setlocal swapfile
+setlocal synmaxcol=3000
+if &syntax != 'ruby'
+setlocal syntax=ruby
+endif
+setlocal tabstop=8
+setlocal tags=~/Projects/Gems/skroutz_validators/test/dummy/tmp/tags,./tags,./TAGS,tags,TAGS,~/Projects/Gems/skroutz_validators/test/dummy/tags
+setlocal textwidth=0
+setlocal thesaurus=
+setlocal nowinfixheight
+setlocal nowinfixwidth
+setlocal wrap
+setlocal wrapmargin=0
+let s:l = 2 - ((1 * winheight(0) + 30) / 61)
+if s:l < 1 | let s:l = 1 | endif
+exe s:l
+normal! zt
+2
+normal! 02l
+let &so = s:so_save | let &siso = s:siso_save
+doautoall SessionLoadPost
+" vim: set ft=vim :

@@ -1,0 +1,392 @@
+let s:so_save = &so | let s:siso_save = &siso | set so=0 siso=0
+argglobal
+let s:cpo_save=&cpo
+set cpo&vim
+inoremap <buffer> <silent> <End> :py ConqueTerm_2.write("\x1bOF")
+inoremap <buffer> <silent> <Home> :py ConqueTerm_2.write("\x1bOH")
+inoremap <buffer> <silent> <Left> :py ConqueTerm_2.write("\x1b[D")
+inoremap <buffer> <silent> <Right> :py ConqueTerm_2.write("\x1b[C")
+inoremap <buffer> <silent> <Down> :py ConqueTerm_2.write("\x1b[B")
+inoremap <buffer> <silent> <Up> :py ConqueTerm_2.write("\x1b[A")
+inoremap <buffer> <silent> <BS> :py ConqueTerm_2.write("\x08")
+nnoremap <buffer> <silent>  :py ConqueTerm_2.write(chr(3))
+nmap <buffer> gf <Plug>RailsTabFind
+nmap <buffer> f <Plug>RailsSplitFind
+inoremap <buffer> <silent> ¿ :py ConqueTerm_2.write_latin1(chr(191))
+inoremap <buffer> <silent> ¾ :py ConqueTerm_2.write_latin1(chr(190))
+inoremap <buffer> <silent> ½ :py ConqueTerm_2.write_latin1(chr(189))
+inoremap <buffer> <silent> ¼ :py ConqueTerm_2.write_latin1(chr(188))
+inoremap <buffer> <silent> » :py ConqueTerm_2.write_latin1(chr(187))
+inoremap <buffer> <silent> º :py ConqueTerm_2.write_latin1(chr(186))
+inoremap <buffer> <silent> ¹ :py ConqueTerm_2.write_latin1(chr(185))
+inoremap <buffer> <silent> ¸ :py ConqueTerm_2.write_latin1(chr(184))
+inoremap <buffer> <silent> · :py ConqueTerm_2.write_latin1(chr(183))
+inoremap <buffer> <silent> ¶ :py ConqueTerm_2.write_latin1(chr(182))
+inoremap <buffer> <silent> µ :py ConqueTerm_2.write_latin1(chr(181))
+inoremap <buffer> <silent> ´ :py ConqueTerm_2.write_latin1(chr(180))
+inoremap <buffer> <silent> ³ :py ConqueTerm_2.write_latin1(chr(179))
+inoremap <buffer> <silent> ² :py ConqueTerm_2.write_latin1(chr(178))
+inoremap <buffer> <silent> ± :py ConqueTerm_2.write_latin1(chr(177))
+inoremap <buffer> <silent> ° :py ConqueTerm_2.write_latin1(chr(176))
+inoremap <buffer> <silent> ¯ :py ConqueTerm_2.write_latin1(chr(175))
+inoremap <buffer> <silent> ® :py ConqueTerm_2.write_latin1(chr(174))
+inoremap <buffer> <silent> ­ :py ConqueTerm_2.write_latin1(chr(173))
+inoremap <buffer> <silent> ¬ :py ConqueTerm_2.write_latin1(chr(172))
+inoremap <buffer> <silent> « :py ConqueTerm_2.write_latin1(chr(171))
+inoremap <buffer> <silent> ª :py ConqueTerm_2.write_latin1(chr(170))
+inoremap <buffer> <silent> © :py ConqueTerm_2.write_latin1(chr(169))
+inoremap <buffer> <silent> ¨ :py ConqueTerm_2.write_latin1(chr(168))
+inoremap <buffer> <silent> § :py ConqueTerm_2.write_latin1(chr(167))
+inoremap <buffer> <silent> ¦ :py ConqueTerm_2.write_latin1(chr(166))
+inoremap <buffer> <silent> ¥ :py ConqueTerm_2.write_latin1(chr(165))
+inoremap <buffer> <silent> ¤ :py ConqueTerm_2.write_latin1(chr(164))
+inoremap <buffer> <silent> £ :py ConqueTerm_2.write_latin1(chr(163))
+inoremap <buffer> <silent> ¢ :py ConqueTerm_2.write_latin1(chr(162))
+inoremap <buffer> <silent> ¡ :py ConqueTerm_2.write_latin1(chr(161))
+inoremap <buffer> <silent>   :py ConqueTerm_2.write_latin1(chr(160))
+inoremap <buffer> <silent>  :py ConqueTerm_2.write_latin1(chr(159))
+inoremap <buffer> <silent>  :py ConqueTerm_2.write_latin1(chr(158))
+inoremap <buffer> <silent>  :py ConqueTerm_2.write_latin1(chr(157))
+inoremap <buffer> <silent>  :py ConqueTerm_2.write_latin1(chr(156))
+inoremap <buffer> <silent>  :py ConqueTerm_2.write_latin1(chr(155))
+inoremap <buffer> <silent>  :py ConqueTerm_2.write_latin1(chr(154))
+inoremap <buffer> <silent>  :py ConqueTerm_2.write_latin1(chr(153))
+inoremap <buffer> <silent>  :py ConqueTerm_2.write_latin1(chr(152))
+inoremap <buffer> <silent>  :py ConqueTerm_2.write_latin1(chr(151))
+inoremap <buffer> <silent>  :py ConqueTerm_2.write_latin1(chr(150))
+inoremap <buffer> <silent>  :py ConqueTerm_2.write_latin1(chr(149))
+inoremap <buffer> <silent>  :py ConqueTerm_2.write_latin1(chr(148))
+inoremap <buffer> <silent>  :py ConqueTerm_2.write_latin1(chr(147))
+inoremap <buffer> <silent>  :py ConqueTerm_2.write_latin1(chr(146))
+inoremap <buffer> <silent>  :py ConqueTerm_2.write_latin1(chr(145))
+inoremap <buffer> <silent>  :py ConqueTerm_2.write_latin1(chr(144))
+inoremap <buffer> <silent>  :py ConqueTerm_2.write_latin1(chr(143))
+inoremap <buffer> <silent>  :py ConqueTerm_2.write_latin1(chr(142))
+inoremap <buffer> <silent>  :py ConqueTerm_2.write_latin1(chr(141))
+inoremap <buffer> <silent>  :py ConqueTerm_2.write_latin1(chr(140))
+inoremap <buffer> <silent>  :py ConqueTerm_2.write_latin1(chr(139))
+inoremap <buffer> <silent>  :py ConqueTerm_2.write_latin1(chr(138))
+inoremap <buffer> <silent>  :py ConqueTerm_2.write_latin1(chr(137))
+inoremap <buffer> <silent>  :py ConqueTerm_2.write_latin1(chr(136))
+inoremap <buffer> <silent>  :py ConqueTerm_2.write_latin1(chr(135))
+inoremap <buffer> <silent>  :py ConqueTerm_2.write_latin1(chr(134))
+inoremap <buffer> <silent>  :py ConqueTerm_2.write_latin1(chr(133))
+inoremap <buffer> <silent>  :py ConqueTerm_2.write_latin1(chr(132))
+inoremap <buffer> <silent>  :py ConqueTerm_2.write_latin1(chr(131))
+inoremap <buffer> <silent>  :py ConqueTerm_2.write_latin1(chr(130))
+inoremap <buffer> <silent>  :py ConqueTerm_2.write_latin1(chr(129))
+inoremap <buffer> <silent>  :py ConqueTerm_2.write_latin1(chr(128))
+nnoremap <buffer> <silent> C :echo "Change mode disabled in shell."
+inoremap <buffer> <silent> ÿ :py ConqueTerm_2.write_latin1(chr(255))
+inoremap <buffer> <silent> þ :py ConqueTerm_2.write_latin1(chr(254))
+inoremap <buffer> <silent> ý :py ConqueTerm_2.write_latin1(chr(253))
+inoremap <buffer> <silent> ü :py ConqueTerm_2.write_latin1(chr(252))
+inoremap <buffer> <silent> û :py ConqueTerm_2.write_latin1(chr(251))
+inoremap <buffer> <silent> ú :py ConqueTerm_2.write_latin1(chr(250))
+inoremap <buffer> <silent> ù :py ConqueTerm_2.write_latin1(chr(249))
+inoremap <buffer> <silent> ø :py ConqueTerm_2.write_latin1(chr(248))
+inoremap <buffer> <silent> ÷ :py ConqueTerm_2.write_latin1(chr(247))
+inoremap <buffer> <silent> ö :py ConqueTerm_2.write_latin1(chr(246))
+inoremap <buffer> <silent> õ :py ConqueTerm_2.write_latin1(chr(245))
+inoremap <buffer> <silent> ô :py ConqueTerm_2.write_latin1(chr(244))
+inoremap <buffer> <silent> ó :py ConqueTerm_2.write_latin1(chr(243))
+inoremap <buffer> <silent> ò :py ConqueTerm_2.write_latin1(chr(242))
+inoremap <buffer> <silent> ñ :py ConqueTerm_2.write_latin1(chr(241))
+inoremap <buffer> <silent> ð :py ConqueTerm_2.write_latin1(chr(240))
+inoremap <buffer> <silent> ï :py ConqueTerm_2.write_latin1(chr(239))
+inoremap <buffer> <silent> î :py ConqueTerm_2.write_latin1(chr(238))
+inoremap <buffer> <silent> í :py ConqueTerm_2.write_latin1(chr(237))
+inoremap <buffer> <silent> ì :py ConqueTerm_2.write_latin1(chr(236))
+inoremap <buffer> <silent> ë :py ConqueTerm_2.write_latin1(chr(235))
+inoremap <buffer> <silent> ê :py ConqueTerm_2.write_latin1(chr(234))
+inoremap <buffer> <silent> é :py ConqueTerm_2.write_latin1(chr(233))
+inoremap <buffer> <silent> è :py ConqueTerm_2.write_latin1(chr(232))
+inoremap <buffer> <silent> ç :py ConqueTerm_2.write_latin1(chr(231))
+inoremap <buffer> <silent> æ :py ConqueTerm_2.write_latin1(chr(230))
+inoremap <buffer> <silent> å :py ConqueTerm_2.write_latin1(chr(229))
+inoremap <buffer> <silent> ä :py ConqueTerm_2.write_latin1(chr(228))
+inoremap <buffer> <silent> ã :py ConqueTerm_2.write_latin1(chr(227))
+inoremap <buffer> <silent> â :py ConqueTerm_2.write_latin1(chr(226))
+inoremap <buffer> <silent> á :py ConqueTerm_2.write_latin1(chr(225))
+inoremap <buffer> <silent> à :py ConqueTerm_2.write_latin1(chr(224))
+inoremap <buffer> <silent> ß :py ConqueTerm_2.write_latin1(chr(223))
+inoremap <buffer> <silent> Þ :py ConqueTerm_2.write_latin1(chr(222))
+inoremap <buffer> <silent> Ý :py ConqueTerm_2.write_latin1(chr(221))
+inoremap <buffer> <silent> Ü :py ConqueTerm_2.write_latin1(chr(220))
+inoremap <buffer> <silent> Û :py ConqueTerm_2.write_latin1(chr(219))
+inoremap <buffer> <silent> Ú :py ConqueTerm_2.write_latin1(chr(218))
+inoremap <buffer> <silent> Ù :py ConqueTerm_2.write_latin1(chr(217))
+inoremap <buffer> <silent> Ø :py ConqueTerm_2.write_latin1(chr(216))
+inoremap <buffer> <silent> × :py ConqueTerm_2.write_latin1(chr(215))
+inoremap <buffer> <silent> Ö :py ConqueTerm_2.write_latin1(chr(214))
+inoremap <buffer> <silent> Õ :py ConqueTerm_2.write_latin1(chr(213))
+inoremap <buffer> <silent> Ô :py ConqueTerm_2.write_latin1(chr(212))
+inoremap <buffer> <silent> Ó :py ConqueTerm_2.write_latin1(chr(211))
+inoremap <buffer> <silent> Ò :py ConqueTerm_2.write_latin1(chr(210))
+inoremap <buffer> <silent> Ñ :py ConqueTerm_2.write_latin1(chr(209))
+inoremap <buffer> <silent> Ð :py ConqueTerm_2.write_latin1(chr(208))
+inoremap <buffer> <silent> Ï :py ConqueTerm_2.write_latin1(chr(207))
+inoremap <buffer> <silent> Î :py ConqueTerm_2.write_latin1(chr(206))
+inoremap <buffer> <silent> Í :py ConqueTerm_2.write_latin1(chr(205))
+inoremap <buffer> <silent> Ì :py ConqueTerm_2.write_latin1(chr(204))
+inoremap <buffer> <silent> Ë :py ConqueTerm_2.write_latin1(chr(203))
+inoremap <buffer> <silent> Ê :py ConqueTerm_2.write_latin1(chr(202))
+inoremap <buffer> <silent> É :py ConqueTerm_2.write_latin1(chr(201))
+inoremap <buffer> <silent> È :py ConqueTerm_2.write_latin1(chr(200))
+inoremap <buffer> <silent> Ç :py ConqueTerm_2.write_latin1(chr(199))
+inoremap <buffer> <silent> Æ :py ConqueTerm_2.write_latin1(chr(198))
+inoremap <buffer> <silent> Å :py ConqueTerm_2.write_latin1(chr(197))
+inoremap <buffer> <silent> Ä :py ConqueTerm_2.write_latin1(chr(196))
+inoremap <buffer> <silent> Ã :py ConqueTerm_2.write_latin1(chr(195))
+inoremap <buffer> <silent> Â :py ConqueTerm_2.write_latin1(chr(194))
+inoremap <buffer> <silent> Á :py ConqueTerm_2.write_latin1(chr(193))
+inoremap <buffer> <silent> À :py ConqueTerm_2.write_latin1(chr(192))
+nnoremap <buffer> <silent> P :py ConqueTerm_2.write(vim.eval("@@"))a
+nnoremap <buffer> <silent> R :echo "Replace mode disabled in shell."
+nnoremap <buffer> <silent> S :echo "Change mode disabled in shell."
+nnoremap <buffer> <silent> [p :py ConqueTerm_2.write(vim.eval("@@"))a
+nmap <buffer> [f <Plug>RailsAlternate
+nnoremap <buffer> <silent> ]p :py ConqueTerm_2.write(vim.eval("@@"))a
+nmap <buffer> ]f <Plug>RailsRelated
+nnoremap <buffer> <silent> c :echo "Change mode disabled in shell."
+nmap <buffer> gf <Plug>RailsFind
+nnoremap <buffer> <silent> p :py ConqueTerm_2.write(vim.eval("@@"))a
+nnoremap <buffer> <silent> r :echo "Replace mode disabled in shell."
+nnoremap <buffer> <silent> s :echo "Change mode disabled in shell."
+nnoremap <buffer> <silent> <Plug>RailsTabFind :RTfind
+nnoremap <buffer> <silent> <Plug>RailsVSplitFind :RVfind
+nnoremap <buffer> <silent> <Plug>RailsSplitFind :RSfind
+nnoremap <buffer> <silent> <Plug>RailsFind :REfind
+nnoremap <buffer> <silent> <Plug>RailsRelated :R
+nnoremap <buffer> <silent> <Plug>RailsAlternate :A
+inoremap <buffer> <silent>  :py ConqueTerm_2.write(chr(1))
+inoremap <buffer> <silent>  :py ConqueTerm_2.write(chr(2))
+inoremap <buffer> <silent>  :py ConqueTerm_2.write(chr(3))
+inoremap <buffer> <silent>  :py ConqueTerm_2.write(chr(4))
+inoremap <buffer> <silent>  :py ConqueTerm_2.write(chr(5))
+inoremap <buffer> <silent>  :py ConqueTerm_2.write(chr(6))
+inoremap <buffer> <silent>  :py ConqueTerm_2.write(chr(7))
+inoremap <buffer> <silent>  :py ConqueTerm_2.write(chr(8))
+inoremap <buffer> <silent> 	 :py ConqueTerm_2.write(chr(9))
+inoremap <buffer> <silent> <NL> :py ConqueTerm_2.write(chr(10))
+inoremap <buffer> <silent>  :py ConqueTerm_2.write(chr(11))
+inoremap <buffer> <silent>  :py ConqueTerm_2.write(chr(12))
+inoremap <buffer> <silent>  :py ConqueTerm_2.write(chr(13))
+inoremap <buffer> <silent>  :py ConqueTerm_2.write(chr(14))
+inoremap <buffer> <silent>  :py ConqueTerm_2.write(chr(15))
+inoremap <buffer> <silent>  :py ConqueTerm_2.write(chr(16))
+inoremap <buffer> <silent>  :py ConqueTerm_2.write(chr(17))
+inoremap <buffer> <silent>  :py ConqueTerm_2.write(chr(18))
+inoremap <buffer> <silent>  :py ConqueTerm_2.write(chr(19))
+inoremap <buffer> <silent>  :py ConqueTerm_2.write(chr(20))
+inoremap <buffer> <silent>  :py ConqueTerm_2.write(chr(21))
+inoremap <buffer> <silent>  :py ConqueTerm_2.write(chr(22))
+inoremap <buffer> <silent>  :py ConqueTerm_2.write(chr(23))
+inoremap <buffer> <silent>  :py ConqueTerm_2.write(chr(24))
+inoremap <buffer> <silent>  :py ConqueTerm_2.write(chr(25))
+inoremap <buffer> <silent>  :py ConqueTerm_2.write(chr(26))
+inoremap <buffer> <silent>  :py ConqueTerm_2.write(chr(27))
+inoremap <buffer> <silent>  :py ConqueTerm_2.write(chr(28))
+inoremap <buffer> <silent>  :py ConqueTerm_2.write(chr(29))
+inoremap <buffer> <silent>  :py ConqueTerm_2.write(chr(30))
+inoremap <buffer> <silent>  :py ConqueTerm_2.write(chr(31))
+inoremap <buffer> <silent>   :py ConqueTerm_2.write(" ")
+inoremap <buffer> <silent> ! :py ConqueTerm_2.write(chr(33))
+inoremap <buffer> <silent> " :py ConqueTerm_2.write(chr(34))
+inoremap <buffer> <silent> # :py ConqueTerm_2.write(chr(35))
+inoremap <buffer> <silent> $ :py ConqueTerm_2.write(chr(36))
+inoremap <buffer> <silent> % :py ConqueTerm_2.write(chr(37))
+inoremap <buffer> <silent> & :py ConqueTerm_2.write(chr(38))
+inoremap <buffer> <silent> ' :py ConqueTerm_2.write(chr(39))
+inoremap <buffer> <silent> ( :py ConqueTerm_2.write(chr(40))
+inoremap <buffer> <silent> ) :py ConqueTerm_2.write(chr(41))
+inoremap <buffer> <silent> * :py ConqueTerm_2.write(chr(42))
+inoremap <buffer> <silent> + :py ConqueTerm_2.write(chr(43))
+inoremap <buffer> <silent> , :py ConqueTerm_2.write(chr(44))
+inoremap <buffer> <silent> - :py ConqueTerm_2.write(chr(45))
+inoremap <buffer> <silent> . :py ConqueTerm_2.write(chr(46))
+inoremap <buffer> <silent> / :py ConqueTerm_2.write(chr(47))
+inoremap <buffer> <silent> 0 :py ConqueTerm_2.write(chr(48))
+inoremap <buffer> <silent> 1 :py ConqueTerm_2.write(chr(49))
+inoremap <buffer> <silent> 2 :py ConqueTerm_2.write(chr(50))
+inoremap <buffer> <silent> 3 :py ConqueTerm_2.write(chr(51))
+inoremap <buffer> <silent> 4 :py ConqueTerm_2.write(chr(52))
+inoremap <buffer> <silent> 5 :py ConqueTerm_2.write(chr(53))
+inoremap <buffer> <silent> 6 :py ConqueTerm_2.write(chr(54))
+inoremap <buffer> <silent> 7 :py ConqueTerm_2.write(chr(55))
+inoremap <buffer> <silent> 8 :py ConqueTerm_2.write(chr(56))
+inoremap <buffer> <silent> 9 :py ConqueTerm_2.write(chr(57))
+inoremap <buffer> <silent> : :py ConqueTerm_2.write(chr(58))
+inoremap <buffer> <silent> ; :py ConqueTerm_2.write(chr(59))
+inoremap <buffer> <silent> < :py ConqueTerm_2.write(chr(60))
+inoremap <buffer> <silent> = :py ConqueTerm_2.write(chr(61))
+inoremap <buffer> <silent> > :py ConqueTerm_2.write(chr(62))
+inoremap <buffer> <silent> ? :py ConqueTerm_2.write(chr(63))
+inoremap <buffer> <silent> @ :py ConqueTerm_2.write(chr(64))
+inoremap <buffer> <silent> A :py ConqueTerm_2.write(chr(65))
+inoremap <buffer> <silent> B :py ConqueTerm_2.write(chr(66))
+inoremap <buffer> <silent> C :py ConqueTerm_2.write(chr(67))
+inoremap <buffer> <silent> D :py ConqueTerm_2.write(chr(68))
+inoremap <buffer> <silent> E :py ConqueTerm_2.write(chr(69))
+inoremap <buffer> <silent> F :py ConqueTerm_2.write(chr(70))
+inoremap <buffer> <silent> G :py ConqueTerm_2.write(chr(71))
+inoremap <buffer> <silent> H :py ConqueTerm_2.write(chr(72))
+inoremap <buffer> <silent> I :py ConqueTerm_2.write(chr(73))
+inoremap <buffer> <silent> J :py ConqueTerm_2.write(chr(74))
+inoremap <buffer> <silent> K :py ConqueTerm_2.write(chr(75))
+inoremap <buffer> <silent> L :py ConqueTerm_2.write(chr(76))
+inoremap <buffer> <silent> M :py ConqueTerm_2.write(chr(77))
+inoremap <buffer> <silent> N :py ConqueTerm_2.write(chr(78))
+inoremap <buffer> <silent> O :py ConqueTerm_2.write(chr(79))
+inoremap <buffer> <silent> P :py ConqueTerm_2.write(chr(80))
+inoremap <buffer> <silent> Q :py ConqueTerm_2.write(chr(81))
+inoremap <buffer> <silent> R :py ConqueTerm_2.write(chr(82))
+inoremap <buffer> <silent> S :py ConqueTerm_2.write(chr(83))
+inoremap <buffer> <silent> T :py ConqueTerm_2.write(chr(84))
+inoremap <buffer> <silent> U :py ConqueTerm_2.write(chr(85))
+inoremap <buffer> <silent> V :py ConqueTerm_2.write(chr(86))
+inoremap <buffer> <silent> W :py ConqueTerm_2.write(chr(87))
+inoremap <buffer> <silent> X :py ConqueTerm_2.write(chr(88))
+inoremap <buffer> <silent> Y :py ConqueTerm_2.write(chr(89))
+inoremap <buffer> <silent> Z :py ConqueTerm_2.write(chr(90))
+inoremap <buffer> <silent> [ :py ConqueTerm_2.write(chr(91))
+inoremap <buffer> <silent> \ :py ConqueTerm_2.write(chr(92))
+inoremap <buffer> <silent> ] :py ConqueTerm_2.write(chr(93))
+inoremap <buffer> <silent> ^ :py ConqueTerm_2.write(chr(94))
+inoremap <buffer> <silent> _ :py ConqueTerm_2.write(chr(95))
+inoremap <buffer> <silent> ` :py ConqueTerm_2.write(chr(96))
+inoremap <buffer> <silent> a :py ConqueTerm_2.write(chr(97))
+inoremap <buffer> <silent> b :py ConqueTerm_2.write(chr(98))
+inoremap <buffer> <silent> c :py ConqueTerm_2.write(chr(99))
+inoremap <buffer> <silent> d :py ConqueTerm_2.write(chr(100))
+inoremap <buffer> <silent> e :py ConqueTerm_2.write(chr(101))
+inoremap <buffer> <silent> f :py ConqueTerm_2.write(chr(102))
+inoremap <buffer> <silent> g :py ConqueTerm_2.write(chr(103))
+inoremap <buffer> <silent> h :py ConqueTerm_2.write(chr(104))
+inoremap <buffer> <silent> i :py ConqueTerm_2.write(chr(105))
+inoremap <buffer> <silent> j :py ConqueTerm_2.write(chr(106))
+inoremap <buffer> <silent> k :py ConqueTerm_2.write(chr(107))
+inoremap <buffer> <silent> l :py ConqueTerm_2.write(chr(108))
+inoremap <buffer> <silent> m :py ConqueTerm_2.write(chr(109))
+inoremap <buffer> <silent> n :py ConqueTerm_2.write(chr(110))
+inoremap <buffer> <silent> o :py ConqueTerm_2.write(chr(111))
+inoremap <buffer> <silent> p :py ConqueTerm_2.write(chr(112))
+inoremap <buffer> <silent> q :py ConqueTerm_2.write(chr(113))
+inoremap <buffer> <silent> r :py ConqueTerm_2.write(chr(114))
+inoremap <buffer> <silent> s :py ConqueTerm_2.write(chr(115))
+inoremap <buffer> <silent> t :py ConqueTerm_2.write(chr(116))
+inoremap <buffer> <silent> u :py ConqueTerm_2.write(chr(117))
+inoremap <buffer> <silent> v :py ConqueTerm_2.write(chr(118))
+inoremap <buffer> <silent> w :py ConqueTerm_2.write(chr(119))
+inoremap <buffer> <silent> x :py ConqueTerm_2.write(chr(120))
+inoremap <buffer> <silent> y :py ConqueTerm_2.write(chr(121))
+inoremap <buffer> <silent> z :py ConqueTerm_2.write(chr(122))
+inoremap <buffer> <silent> { :py ConqueTerm_2.write(chr(123))
+inoremap <buffer> <silent> | :py ConqueTerm_2.write(chr(124))
+inoremap <buffer> <silent> } :py ConqueTerm_2.write(chr(125))
+inoremap <buffer> <silent> ~ :py ConqueTerm_2.write(chr(126))
+inoremap <buffer> <silent>  :py ConqueTerm_2.write(chr(127))
+let &cpo=s:cpo_save
+unlet s:cpo_save
+setlocal keymap=
+setlocal noarabic
+setlocal autoindent
+setlocal balloonexpr=
+setlocal nobinary
+setlocal bufhidden=hide
+setlocal buflisted
+setlocal buftype=nofile
+setlocal nocindent
+setlocal cinkeys=0{,0},0),:,0#,!^F,o,O,e
+setlocal cinoptions=
+setlocal cinwords=if,else,while,do,for,switch
+setlocal comments=s1:/*,mb:*,ex:*/,://,b:#,:%,:XCOMM,n:>,fb:-
+setlocal commentstring=/*%s*/
+setlocal complete=.,w,b,u,t,i
+setlocal completefunc=
+setlocal nocopyindent
+setlocal nocursorcolumn
+setlocal nocursorline
+setlocal define=
+setlocal dictionary=
+setlocal nodiff
+setlocal equalprg=
+setlocal errorformat=
+setlocal expandtab
+if &filetype != 'conque_term'
+setlocal filetype=conque_term
+endif
+setlocal foldcolumn=0
+setlocal foldenable
+setlocal foldexpr=0
+setlocal foldignore=#
+setlocal foldlevel=1
+setlocal foldmarker={{{,}}}
+setlocal foldmethod=manual
+setlocal foldminlines=1
+setlocal foldnestmax=20
+setlocal foldtext=foldtext()
+setlocal formatexpr=
+setlocal formatoptions=tcq
+setlocal formatlistpat=^\\s*\\d\\+[\\]:.)}\\t\ ]\\s*
+setlocal grepprg=
+setlocal iminsert=2
+setlocal imsearch=2
+setlocal include=
+setlocal includeexpr=RailsIncludeexpr()
+setlocal indentexpr=
+setlocal indentkeys=0{,0},:,0#,!^F,o,O,e
+setlocal noinfercase
+setlocal iskeyword=@,48-57,_,192-255
+setlocal keywordprg=
+setlocal nolinebreak
+setlocal nolisp
+setlocal nolist
+setlocal makeprg=
+setlocal matchpairs=(:),{:},[:]
+setlocal modeline
+setlocal modifiable
+setlocal nrformats=octal,hex
+setlocal nonumber
+setlocal numberwidth=4
+setlocal omnifunc=
+setlocal path=.,~/projects/SocialBuy,~/projects/SocialBuy/app,~/projects/SocialBuy/app/models,~/projects/SocialBuy/app/controllers,~/projects/SocialBuy/app/helpers,~/projects/SocialBuy/config,~/projects/SocialBuy/lib,~/projects/SocialBuy/app/views,~/projects/SocialBuy/test,~/projects/SocialBuy/test/unit,~/projects/SocialBuy/test/functional,~/projects/SocialBuy/test/integration,~/projects/SocialBuy/app/*,~/projects/SocialBuy/vendor,~/projects/SocialBuy/vendor/plugins/*/lib,~/projects/SocialBuy/vendor/plugins/*/test,~/projects/SocialBuy/vendor/rails/*/lib,~/projects/SocialBuy/vendor/rails/*/test,/usr/include
+setlocal nopreserveindent
+setlocal nopreviewwindow
+setlocal quoteescape=\\
+setlocal noreadonly
+setlocal norightleft
+setlocal rightleftcmd=search
+setlocal noscrollbind
+setlocal shiftwidth=2
+setlocal noshortname
+setlocal smartindent
+setlocal softtabstop=2
+setlocal nospell
+setlocal spellcapcheck=[.?!]\\_[\\])'\"\	\ ]\\+
+setlocal spellfile=
+setlocal spelllang=en
+setlocal statusline=%<%f\ %h%m%r%{rails#statusline()}%=%-14.(%l,%c%V%)\ %P
+setlocal suffixesadd=.rb,.rhtml,.erb,.rxml,.builder,.rjs,.mab,.liquid,.haml,.dryml,.mn,.css,.js,.yml,.csv,.rake,.sql,.html,.xml
+setlocal noswapfile
+setlocal synmaxcol=3000
+if &syntax != 'conque_term'
+setlocal syntax=conque_term
+endif
+setlocal tabstop=8
+setlocal tags=~/projects/SocialBuy/tmp/tags,./tags,./TAGS,tags,TAGS,~/projects/SocialBuy/tags
+setlocal textwidth=0
+setlocal thesaurus=
+setlocal nowinfixheight
+setlocal nowinfixwidth
+setlocal nowrap
+setlocal wrapmargin=0
+let s:l = 386 - ((79 * winheight(0) + 40) / 80)
+if s:l < 1 | let s:l = 1 | endif
+exe s:l
+normal! zt
+386
+normal! 06l
+let &so = s:so_save | let &siso = s:siso_save
+doautoall SessionLoadPost
+" vim: set ft=vim :
